@@ -1,0 +1,61 @@
+>> O que é o Django?
+    >> É um framework de desenvolvimento Web escrito em Python
+    >> Segue o padrão de arquitetura MVT (Model-View-Template)
+        >> Model: Estrutura que representa os dados da aplicação
+            >> Possui ligação direta com o banco de dados e pode manipular, incluir ou excluir dados
+            >> O banco padrão é o SQL
+        >> View: Função Python que recebe uma requisição e envia uma resposta
+            >> Camada intermediária entre a Model e a Template
+        >> Template: É a renderização dos artefatos compreendidos pelo navegador para o usuário final
+    >> Possui um sistema de Mapeamento Objeto-Relacional (ORM)
+        >> Para gerenciar dados do banco de dados
+    >> Possui sistema de administração automático, suporte integrado a autenticação de usuários e recursos de segurança
+
+>> O que são Ambiente Virtuais Python?
+    >> Também são conhecidos como "virtualenvs" ou "venvs"
+    >> Cada ambiente virtual é um diretório que contém sua própria instalação do Python e bibliotecas. 
+        >> Evita conflitos entre versões de pacotes e permite que você crie configurações Python 
+           personalizadas para projetos específicos.
+    >> Cada projeto Django possui um ambiente virtual próprio
+    >> A ferramenta venv padrão está incluída no Python 3
+
+>> Como criar um Projeto Django?
+    >> Criar uma pasta para o projeto
+    >> Abrir a pasta no VS Code
+    >> Abrir o terminal (Ctrl + J)
+    >> No terminal, digitar:
+        >> python -m venv nome-do-ambiente
+            >> Esse comando cria o ambiente virtual para o projeto
+            >> -m: importa o módulo
+            >> venv: é o módulo a ser utilizado
+            >> nome-do-ambiente: irá criar uma pasta, onde ficará armazenado tudo o que for 
+               instalado com o ambiente virtual ativo    
+        >> .\nome-do-ambiente\Scripts\activate
+            >> Irá ativar o ambiente virtual
+            >> Verificar se aparece no terminal: (nome-do-ambiente)
+                >> Significa que o ambiente está ativado
+            >> Caso a ativação for restringida pelo Powershell, digitar o comando:
+                >> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+                    >> Define a Política de Execução de Scripts para "Unrestricted" (Sem Restrições)
+                       no escopo do usuário atual.
+        >> pip install django
+            >> Instala o django
+        >> pip freeze
+            >> Lista todas as bibliotecas (ou pacotes) instaladas juntamente com suas versões
+        >> django-admin startproject nome-do-projeto .
+            >> Inicia o projeto 
+        >> python manage.py runserver
+            >> Inicia o servidor
+
+>> Arquivos iniciais de um Projeto Django
+
+>> Extensões do VS Code
+    >> Pylance
+    >> Python
+    >> Batisteo Django
+
+>> Como usar o VS Code para automatizar a ativação do Ambiente Virtual?
+    >> Ctrl + Shift + P
+	>> Python: Select Interpretor
+	>> Selecionar o recomendado
+	>> O terminal vai automaticamente irá ativar o ambiente virtual
